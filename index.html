@@ -14,15 +14,84 @@
     </div>
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
-        <div class="col-lg-6">
-            <div id="graph1"></div>
+        <div class="col-lg-6" class = "text-center">
+          <p> Find top actors or top actor-director pairs and hover for their top genre!</p>
+          <button type="button" class="btn btn-info" onclick="setData('actor')">Top Actors</button>
+          <button type="button" class="btn btn-info" onclick="setData('actor-director')">Actor-director pairs</button>
+
+            <div id="graph1" ></div>
             <div id="graph2"></div><br/>
         </div>
-        <div class="col-lg-6">
-            <div id="graph3"></div>
+        <div class="col-lg-6" class = "text-center">
+          <br></br>
+            <div id="graph3" ></div>
         </div>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="genres.js"></script>
+    <script type="text/javascript" src="runtimes.js"></script>
+    <h2> Written questions
+    </h2>
+      <p>
+      Question 1: My visualization addresses the number of titles per genre in a straightforward way, by
+      presenting each genre in the dataset and the number of movies that were assigned that genre
+      for at least one of their genres. The bar graph shows the exact number of movies per genre as well
+      as the relative number, as indicated by bar length. It also shows the average runtime by year via
+      a scatterplot, which nicely arranges the points in a chronological and temporally-intuitive manner.
+      Finally, my visualization addresses the last question (top actor/director pairs by number of movies
+      made together) by displaying the 15 most frequent pairs and the most frequent genre of movie they've
+      made together. I expanded this by also adding the most frequent actors in the dataset and their most
+      common movie genre.
+
+      </p>
+
+      <p>
+      Question 2: D3 was helpful in this assignment because it allowed information to be expressed in multiple ways.
+      For example, I could use color to show the relative frequency of titles per actor while also adding a
+      tool-tip or axis to give the user the exact frequency value if they are interested. In this way, D3 can make
+      the visualization intuitive and immediate and yet still precise. D3 was also helpful in making the visualization
+      interactive (buttons, transition, tooltip), which both improved both the aesthetics and could help the viewer
+      be more engaged in the data and explore it further. Finally, D3 was very useful in giving me a variety of
+      different options for graph types, and making these graph types and inputs flexible to different JavaScript
+      data types. For example, I used maps and lists as data structures because I had to do pre-processing and
+      computation, and this worked just as well as the dataframes that we used in the lab.
+
+      </p>
+      <p>
+      Question 3: D3 might not be the best tool for a visualization if the visualization or graph format is not
+      well-supported by one of D3's existing graph types, such as bar graphs, scatter plots, etc. While this may
+      be unlikely, in any case the person creating the visualization will have to adapt their visualization
+      to the formats that D3 allows for. This tool might
+      also not be the best choice if someone is looking for a quick, simple visualization of data that does
+      not require in-depth interactives, as certain details such as page alignment/margins, axes, and labeling
+      can be somewhat difficult or require more syntactical overhead to produce than a simple visualization
+      using Excel, for example. Lastly, if someone wanted to utilize many external packages in doing their analysis
+      or visualization, D3 might not be the best choice, and you might want to use a Python-supported visualization
+      tool instead.
+
+      </p>
+      <p>
+      Question 4: It is likely that users without visual impairs are most likely to find these visualizations most
+      accessible. However, I tried to use some of the principles from the articles to make my design more accessible,
+      including having informative titles, axes, and presenting information in more than one way (eg. having
+      the bar length, bar color intensity, and frequency annotations all describe absolute and relative frequency).
+      I could make this design even more accessible by adding a summary to the bottom of the charts (describing,
+      for example, the overall trend of the graph or the greatest actor or actor-director duo). I could try
+      applying different filters to make the colors more crisp/contrasted, and explore other ways to display the
+      top genre than a hover tool, which may be difficult/impossible to see with assistive technology.
+
+      </p>
+      <p>
+      Question 5: Reflecting on my design process, I tried to think about certain aspects (eg. displaying information
+      in multiple ways) from the very beginning. However, other aspects such as what information I would display on the
+      screen versus in an interactive button/tooltip, I decided towards the middle or end of my process, once I saw
+      how the data was distributed and which patterns would be the most interesting to explore. Not knowing the details
+      of the data before I visualized it definitely played into potentially lower accessibility, as well as having a
+      limited amount of time to complete the assignment and not knowing how to do things in D3. I was more often
+      pre-occupied with basic visualization details relevant to all users
+      (eg. how to make the axes appear correctly) which left less time for accessibility. 
+
+      </p>
 </body>
 </html>
